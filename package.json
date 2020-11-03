@@ -1,0 +1,22 @@
+{
+  "name": "autodehoist",
+  "version": "1.0.0",
+  "description": "AutoDeHoist",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnotherGenZ/AutoDeHoist.git"
+  },
+  "author": "AnotherGenZ",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AnotherGenZ/AutoDeHoist/issues"
+  },
+  "homepage": "https://github.com/AnotherGenZ/AutoDeHoist#readme",
+  "dependencies": {
+    "eris": "^0.10.1"
+  }
+}
