@@ -4,16 +4,16 @@ require('dotenv').config();
 
 const bot = new Eris(process.env.TOKEN);
 
-const hoists = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '{', '}', '[', ']', ';', ':', '/', '?', '+', '=', '_', '-', '.', ',', '\\', '|', '~', '"', '`', '\''];
+const hoists = new Set(['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '{', '}', '[', ']', ';', ':', '/', '?', '+', '=', '_', '-', '.', ',', '\\', '|', '~', '"', '`', '\'']);
 
 function cleanMember(member) {
-  if (member.nick && hoists.includes(member.nick[0])) {
+  if (member.nick && hoists.has(member.nick[0])) {
     member.edit({
       nick: process.env.NICK
     });
   }
 
-  if (hoists.includes(member.username[0])) {
+  if (hoists.has(member.username[0])) {
 
     member.edit({
       nick: process.env.NICK
